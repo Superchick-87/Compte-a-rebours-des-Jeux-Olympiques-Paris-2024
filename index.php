@@ -61,11 +61,11 @@
             </div>
             <div class="space">
                 <div id="mins" class="time"></div>
-                <div class="timeLib">mins</div>
+                <div class="timeLib">min.</div>
             </div>
             <div class="space">
                 <div id="sec" class="time"></div>
-                <div class="timeLib">sec</div>
+                <div class="timeLib">sec.</div>
             </div>
         </div>
     </section>
