@@ -79,15 +79,13 @@
     var mins = document.getElementById("mins");
     var secs = document.getElementById("sec");
 
-
-
     var competition = document.getElementById("competition").value;
     console.log(competition);
 
     function compette(x) {
         if (x === 'JO2024') {
             return "Jul 26 2024 19:30:00";
-            console.log("Jul 26 2024 19:30:00")
+            console.log("Jul 26 2024 19:30:30")
         }
         if (x === 'CM2023') {
             return "Sep 08 2023 20:00:00";
@@ -97,16 +95,16 @@
 
     function Rebour() {
         var date1 = new Date();
-        var date2 = new Date(compette(competition)); // Date et heure de l'événement
-        // var date2 = new Date("Jul 26 2024 20:00:00"); // Date et heure de l'événement
+        var date2 = new Date(compette(competition)); //Date et heure de l'événement -
+        // var date2 = new Date ("Jul 26 2024 20:00:00");  //Date et heure de l'événement -
         console.log(date1);
         console.log(date2);
         var sec = (date2 - date1) / 1000; // Temps donné en millièmes de seconde
-        var n = 24 * 3600; // nombre de secondes dans un jour
+        var n = 24 * 3600; //nombre de secondes dans un jour
         if (sec > 0) {
-            var j = Math.floor(sec / n);
-            var h = Math.floor((sec - (j * n)) / 3600);
-            var mn = Math.floor((sec - ((j * n + h * 3600))) / 60);
+            j = Math.floor(sec / n);
+            h = Math.floor((sec - (j * n)) / 3600);
+            mn = Math.floor((sec - ((j * n + h * 3600))) / 60);
             sec = Math.floor(sec - ((j * n + h * 3600 + mn * 60)));
 
             days.innerHTML = j;
@@ -114,7 +112,7 @@
             mins.innerHTML = mn;
             secs.innerHTML = sec;
 
-            // Affiche.innerHTML = j + " jour(s), " + h + " h " + mn + " min " + sec + " sec";
+            // Affiche.innerHTML = j +" jour(s), "+ h +" h "+ mn +" min "+ sec + " sec";
             window.status = "Il vous reste " + j + " jour(s), " + h + " h " + mn + " min " + sec + " sec pour voter.";
         } else {
             days.innerHTML = 0;
@@ -123,22 +121,8 @@
             secs.innerHTML = 0;
         }
 
-        var legends = document.querySelectorAll('.timeLib');
-        // console.log(legends[0].innerHTML);
-        var x = 0;
-        // Utiliser une boucle for pour itérer sur chaque élément
-        if (j < 2) {
-            legends[0].innerHTML = "jour";
-            console.log(x);
-        }
-        if (h < 2) {
-            legends[1].innerHTML = "heure";
-        }
-
-        setTimeout(Rebour, 1000);
+        tRebour = setTimeout("Rebour();", 1000);
     }
-
-
     Rebour();
 </script>
 
