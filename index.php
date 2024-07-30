@@ -53,11 +53,11 @@
         <div class="flex compteur">
             <div class="space">
                 <div id="days" class="time"></div>
-                <div class="timeLib">jours</div>
+                <div class="timeLib">jour</div>
             </div>
             <div class="space">
                 <div id="hours" class="time"></div>
-                <div class="timeLib">heures</div>
+                <div class="timeLib">heure</div>
             </div>
             <div class="space">
                 <div id="mins" class="time"></div>
